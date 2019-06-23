@@ -42,7 +42,7 @@ class LunarCalendar extends HTMLElement {
     var today = '';
     today = new Date();
     var act = today.getDay();
-    if(act==0) act = 7; else act = act-1;
+    if(act==0) act = 7;
     today = today.getDay();
     today = thu[today];
 
@@ -167,14 +167,14 @@ class LunarCalendar extends HTMLElement {
           color:#A2A2A2;
         }
 
-        .ldate .week .we:nth-child(${act+1}){
+        .ldate .week .we:nth-child(${act}){
           background-color: #639FED;
           color:#fff;
         }
-        .ldate .week .we:nth-child(${act+1}),
-        .ldate .week .we:nth-child(${act+1}).red .we0,
-        .ldate .week .we:nth-child(${act+1}) .we0,
-        .ldate .week .we:nth-child(${act+1}) .we2{
+        .ldate .week .we:nth-child(${act}),
+        .ldate .week .we:nth-child(${act}).red .we0,
+        .ldate .week .we:nth-child(${act}) .we0,
+        .ldate .week .we:nth-child(${act}) .we2{
           color:#fff;
         }
       </style>
